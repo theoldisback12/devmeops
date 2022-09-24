@@ -15,4 +15,5 @@ stages {
                 bat 'mvn test  -DskipTests'
             }
         }
-}
+        }
+       }
