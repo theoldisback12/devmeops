@@ -1,0 +1,21 @@
+server:
+  port: 8084
+spring:
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    password: theoldisback
+    url: jdbc:postgresql://postgresql_dbgmc:5432/bootcamp
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+            show_sql: true
