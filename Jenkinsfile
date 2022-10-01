@@ -45,7 +45,7 @@ pipeline {
                                          nexusArtifactUploader(
                                              nexusVersion: 3,
                                              protocol: NEXUS_PROTOCOL,
-                                             nexusUrl: NEXUS_URL,
+                                             nexusUrl: HTTPS,
                                              groupId: pom.groupId,
                                              version: pom.version,
                                              repository: NEXUS_REPOSITORY,
