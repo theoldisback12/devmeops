@@ -16,16 +16,16 @@ pipeline {
                 bat 'mvn clean install -DskipTests'
             }
         }
-        stage('SonarQube analysis') {
-                //def scannerHome = tool 'SonarScanner 4.0';
-                     steps{
-                         withSonarQubeEnv("sonarqube9.5") {
+         stage('SonarQube analysis') {
+                        //def scannerHome = tool 'SonarScanner 4.0';
+                             steps{
+                                 withSonarQubeEnv('sonarqube9.5') {
 
-                             bat "mvn sonar:sonar "
+                                     bat "mvn sonar:sonar -DskipTests"
 
-                         }
-                    }
-                }
+                                 }
+                            }
+                          }
         stage("Build docker image"){
             steps{
                 script{
