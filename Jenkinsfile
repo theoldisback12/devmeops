@@ -19,13 +19,13 @@ pipeline {
         stage('SonarQube analysis') {
                 //def scannerHome = tool 'SonarScanner 4.0';
                      steps{
-                         withSonarQubeEnv('sonarqube9.5') {
+                         withSonarQubeEnv("sonarqube9.5") {
 
-                             bat "mvn sonar:sonar -DskipTests"
+                             bat "mvn sonar:sonar "
 
                          }
                     }
-                  }
+                }
         stage("Build docker image"){
             steps{
                 script{
